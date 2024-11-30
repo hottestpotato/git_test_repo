@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Project Manager</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <h1>Project Manager</h1>
+
+    <!--정렬 버튼-->
+    <div id="sort-container" style="margin-bottom: 20px;">
+        <button onclick="fetchProjects('deadline', 'asc')">마감일 기준 정렬 (Asc)</button>
+        <button onclick="fetchProjects('deadline', 'desc')">마감일 기준 정렬 (Desc)</button>
+        <button onclick="fetchProjects('progress', 'desc')">진행률 기준 정렬 (High to Low)</button>
+        <button onclick="fetchProjects('progress', 'asc')">진행률 기준 정렬 (Low to High)</button>
+    </div>
+
+
+    <!-- 프로젝트 추가 폼 -->
+    <form id="project-form" style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+        <input type="text" id="project-name" placeholder="Project Name" required>
+        <textarea id="project-description" placeholder="Description"></textarea>
+        <input type="date" id="project-deadline" required>
+        <button type="submit">Add Project</button>
+    </form>
+ <div id="project-list">
+     <!-- 프로젝트 목록이 여기 표시됩니다 -->
+      
+ </div>
+ <script src="app.js"></script>
+</body>
+</html>

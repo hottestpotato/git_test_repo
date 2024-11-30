@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #007bff;
+    color: white;
+}
+
+#project-list {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* 기본 프로젝트 카드 스타일 */
+.project {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.project:hover {
+    transform: scale(1.02);
+}
+
+/* 상태별 색상 */
+.project.in_progress {
+    border-left: 8px solid #007bff; /* 파란색 */
+}
+
+.project.completed {
+    border-left: 8px solid #28a745; /* 녹색 */
+}
+
+/* 진행률에 따른 색상 변화 */
+.progress-bar {
+    height: 8px;
+    border-radius: 4px;
+    margin-top: 8px;
+    background-color: #f1f1f1;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar span {
+    display: block;
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+/* 진행률 색상 단계 */
+.progress-bar.low span {
+    background-color: #dc3545; /* 빨간색 */
+}
+
+.progress-bar.medium span {
+    background-color: #ffc107; /* 노란색 */
+}
+
+.progress-bar.high span {
+    background-color: #28a745; /* 녹색 */
+}
+
+/* 입력 필드 스타일 */
+#project-form input[type="text"],
+#project-form textarea,
+#project-form input[type="date"],
+#project-form button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box; /* 크기를 균일하게 유지 */
+    min-width: 200px; /* 최소 너비 */
+    flex: 1; /* 동일한 너비 비율 */
+}
+
+/* 텍스트 영역 크기 고정 */
+#project-form textarea {
+    height: 40px; /* 텍스트 영역을 입력란과 동일한 높이로 설정 */
+    resize: none; /* 크기 조절 막기 */
+}
+
+/* 버튼 스타일 */
+#project-form button {
+    padding: 10px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#project-form button:hover {
+    background-color: #0056b3;
+}
+
+/* 폼 전체 레이아웃 */
+#project-form {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* 필드 간 간격 */
+    flex-wrap: wrap; /* 작은 화면에서 줄바꿈 */
+    margin-bottom: 20px;
+}
+
+/* 정렬 버튼 컨테이너 */
+#sort-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#sort-container button {
+    background-color: white;
+    color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#sort-container button:hover {
+    background-color: #c6e1ff;
+}
