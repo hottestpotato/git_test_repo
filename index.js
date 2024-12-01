@@ -14,7 +14,7 @@ const path = require('path');
 app.use(express.static(path.join(__dirname, 'public')));
 
 // 기본 라우트
-app.get('/', (req, res) => {
+app.get('/health', (req, res) => {
     res.send('프로젝트 관리 앱 서버 실행 중');
 });
 
