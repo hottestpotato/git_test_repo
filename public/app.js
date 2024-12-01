@@ -1,5 +1,5 @@
 // API 엔드포인트
-const API_URL = 'http://localhost:3000/api/projects';
+const API_URL = 'http://pm-load-balancer-227593286.us-east-1.elb.amazonaws.com:80/api/projects';
 
 // 프로젝트 목록을 가져와 화면에 렌더링
 async function fetchProjects(sortField = null, sortOrder = 'asc') {
@@ -7,7 +7,7 @@ async function fetchProjects(sortField = null, sortOrder = 'asc') {
     projectList.innerHTML = '<p>Loading...</p>'; // 로딩 메시지 표시
 
     try {
-        const response = await fetch('http://localhost:3000/api/projects');
+        const response = await fetch('http://pm-load-balancer-227593286.us-east-1.elb.amazonaws.com:80/api/projects');
         let projects = await response.json();
         projectList.innerHTML = ''; // 기존 로딩 메시지 제거
 
