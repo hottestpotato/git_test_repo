@@ -115,7 +115,7 @@ async function updateProgress(id) {
     try {
         // 로딩 표시
         inputField.disabled = true;
-        const response = await fetch(`http://localhost:3000/api/projects/${id}`, {
+        const response = await fetch(`http://pm-load-balancer-227593286.us-east-1.elb.amazonaws.com/api/projects/${id}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ progress: parseInt(newProgress, 10) })
@@ -139,7 +139,7 @@ async function updateProgress(id) {
 //상태 업데이트 함수
 async function updateStatus(id) {
     try {
-        const response = await fetch(`http://localhost:3000/api/projects/${id}`, {
+        const response = await fetch(`http://pm-load-balancer-227593286.us-east-1.elb.amazonaws.com/api/projects/${id}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ status: 'completed', progress: 100 })
@@ -159,7 +159,7 @@ async function updateStatus(id) {
 //삭제 함수
 async function deleteProject(id) {
     try {
-        const response = await fetch(`http://localhost:3000/api/projects/${id}`, {
+        const response = await fetch(`http://pm-load-balancer-227593286.us-east-1.elb.amazonaws.com/api/projects/${id}`, {
             method: 'DELETE'
         });
 
