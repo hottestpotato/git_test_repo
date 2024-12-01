@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
 app.use('/api/projects', projectRoutes);
 
 // 서버 실행
-const PORT = 3000;
+const PORT = 80;
 app.listen(PORT, () => {
     console.log(`서버가 http://localhost:${PORT} 에서 실행 중입니다.`);
 });
